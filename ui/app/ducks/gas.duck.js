@@ -4,6 +4,9 @@ import {
   loadLocalStorageData,
   saveLocalStorageData,
 } from '../../lib/local-storage-helpers'
+import {
+  decGWEIToHexWEI,
+} from '../helpers/conversions.util'
 
 // Actions
 const BASIC_GAS_ESTIMATE_LOADING_FINISHED = 'metamask/gas/BASIC_GAS_ESTIMATE_LOADING_FINISHED'
@@ -428,6 +431,17 @@ export function fetchGasEstimates (blockTime) {
         dispatch(setPricesAndTimeEstimates(estimates))
         dispatch(gasEstimatesLoadingFinished())
       })
+  }
+}
+
+export function setCustomGasPriceForRetry (newPrice) {
+  return (dispatch) => {
+    if (newPrice !== '0x0') {
+      dispatch(setCustomGasPrice(newPrice))
+    } else {
+      const { average } = loadLocalStorageData('BASIC_PRICE_ESTIMATES')
+      dispatch(setCustomGasPrice(decGWEIToHexWEI(average)))
+    }
   }
 }
 
