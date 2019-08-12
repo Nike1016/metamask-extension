@@ -50,7 +50,9 @@
     "announce": "node development/announcer.js",
     "version:bump": "node development/run-version-bump.js",
     "storybook": "start-storybook -p 6006 -c .storybook",
-    "update-changelog": "./auto-changelog.sh"
+    "update-changelog": "./auto-changelog.sh",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "browserify": {
     "transform": [
@@ -101,7 +103,7 @@
     "classnames": "^2.2.5",
     "clone": "^2.1.2",
     "copy-to-clipboard": "^3.0.8",
-    "css-loader": "^0.28.11",
+    "css-loader": "^1.0.0",
     "currency-formatter": "^1.4.2",
     "debounce": "1.1.0",
     "debounce-stream": "^2.0.0",
@@ -226,7 +228,8 @@
     "web3": "^0.20.1",
     "web3-stream-provider": "^3.0.1",
     "webrtc-adapter": "^6.3.0",
-    "xtend": "^4.0.1"
+    "xtend": "^4.0.1",
+    "snyk": "^1.216.0"
   },
   "devDependencies": {
     "@sentry/cli": "^1.30.3",
@@ -253,7 +256,7 @@
     "compression": "^1.7.1",
     "coveralls": "^3.0.0",
     "cross-env": "^5.1.4",
-    "css-loader": "^0.28.11",
+    "css-loader": "^1.0.0",
     "deep-freeze-strict": "^1.1.1",
     "del": "^3.0.0",
     "envify": "^4.0.0",
@@ -342,5 +345,6 @@
   "engines": {
     "node": "8.11.3",
     "npm": "^6.1.0"
-  }
+  },
+  "snyk": true
 }
