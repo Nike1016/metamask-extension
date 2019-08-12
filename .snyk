@@ -1,0 +1,22 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:extend:20180424':
+    - react-markdown > unified > extend:
+        patched: '2019-08-12T23:56:36.154Z'
+    - gulp-sass > node-sass > request > extend:
+        patched: '2019-08-12T23:56:36.154Z'
+    - gulp > gulp-cli > liftoff > extend:
+        patched: '2019-08-12T23:56:36.154Z'
+    - gulp > vinyl-fs > glob-stream > extend:
+        patched: '2019-08-12T23:56:36.154Z'
+    - gulp-sass > node-sass > node-gyp > request > extend:
+        patched: '2019-08-12T23:56:36.154Z'
+    - eth-json-rpc-infura > eth-json-rpc-middleware > eth-tx-summary > web3-provider-engine > request > extend:
+        patched: '2019-08-12T23:56:36.154Z'
+    - eth-json-rpc-filters > eth-json-rpc-middleware > eth-tx-summary > web3-provider-engine > request > extend:
+        patched: '2019-08-12T23:56:36.154Z'
+    - eth-block-tracker > eth-json-rpc-infura > eth-json-rpc-middleware > eth-tx-summary > web3-provider-engine > request > extend:
+        patched: '2019-08-12T23:56:36.154Z'
